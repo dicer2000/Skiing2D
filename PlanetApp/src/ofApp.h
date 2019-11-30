@@ -1,17 +1,8 @@
 #pragma once
 
+#include "stdio.h"
+#include "body.h"
 #include "ofMain.h"
-
-class MyClass{
-
-public:
-//	void set(int _i, float _f){
-//		i = _i; f = _f;
-//	};
-
-	int i;
-	float f;
-};
 
 class ofApp : public ofBaseApp{
 	public:
@@ -30,4 +21,18 @@ class ofApp : public ofBaseApp{
 		void windowResized(int w, int h);
 		void dragEvent(ofDragInfo dragInfo);
 		void gotMessage(ofMessage msg);
+	private:
+
+		// To start out, just have the sun written statically in draw()
+		// Then make it it's own body object
+		// Then make an array of bodies
+
+		/* Step 2 */
+		// My Sun
+		body *s;
+		// My single planet (for now)
+//		body *p;
+
+		/* Step 3 - build as an array of pointers */
+		body *planets;
 };
