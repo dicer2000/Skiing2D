@@ -60,6 +60,7 @@ void ofApp::update(){
 //--------------------------------------------------------------
 void ofApp::draw()
 {
+    ofPushMatrix();
 
         // Translate to the center
         ofTranslate(ofGetWidth()/2, ofGetHeight()/2);
