@@ -4,6 +4,7 @@
 #include "body.h"
 #include "ofMain.h"
 
+
 class ofApp : public ofBaseApp{
 	public:
 		void setup();
@@ -23,6 +24,7 @@ class ofApp : public ofBaseApp{
 		void gotMessage(ofMessage msg);
 	private:
 
+
 		// To start out, just have the sun written statically in draw()
 		// Then make it it's own body object
 		// Then make an array of bodies
@@ -34,5 +36,8 @@ class ofApp : public ofBaseApp{
 //		body *p;
 
 		/* Step 3 - build as an array of pointers */
-		body *planets;
+//		body *planets;
+
+		// Step 4 - build the body to have an array of bodies it contains
+		// So, switch planets into the body class => Sun will be only base body
 };
