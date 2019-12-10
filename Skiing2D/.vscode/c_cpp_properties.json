@@ -115,7 +115,7 @@
                     "/usr/local/include",
                     "${workspaceRoot}/../../../libs",
                     "${workspaceRoot}/../../../addons",
-                    "${workspaceRoot}/../../../libs/openFrameworks/**"
+                    "${workspaceRoot}/../../../libs/openFrameworks"
                 ]
             },
             "intelliSenseMode": "clang-x64",
@@ -165,7 +165,7 @@
                 "path": [
                     "${workspaceRoot}/../../../libs",
                     "${workspaceRoot}/../../../addons",
-                    "${workspaceRoot}/../../../libs/openFrameworks/**"
+                    "${workspaceRoot}/../../../libs/openFrameworks"
                 ]
             },
             "intelliSenseMode": "clang-x64",

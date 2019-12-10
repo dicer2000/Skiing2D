@@ -34,6 +34,7 @@
                 "${workspaceRoot}/../../../libs/tess2/include",
                 "${workspaceRoot}/../../../libs/uriparser/include",
                 "${workspaceRoot}/../../../libs/utf8/include",
+                "${workspaceRoot}",
                 "${workspaceRoot}/../../../libs/openFrameworks/**"
             ],
             "browse": {
