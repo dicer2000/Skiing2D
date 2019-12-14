@@ -24,7 +24,7 @@ void ofApp::setup(){
     this->player1 = new skiier(new ofColor(222,40,222));
 
     // Create a tree
-    this->slope1 = new slope();
+    this->slope1 = new slope(this->player1);
 
 
 }
@@ -40,7 +40,7 @@ void ofApp::draw(){
     ofBackground(255);
 
     player1->draw();
-    player1->calc();
+    player1->calc(bLeftKeyPressed, bRightKeyPressed);
 
     slope1->draw();
     slope1->calc();
@@ -51,12 +51,30 @@ void ofApp::draw(){
 
 //--------------------------------------------------------------
 void ofApp::keyPressed(int key){
+    switch(key)
+    {
+        case OF_KEY_LEFT:
+            bLeftKeyPressed = true;
+        break;
 
+        case OF_KEY_RIGHT:
+            bRightKeyPressed = true;
+        break;
+    }
 }
 
 //--------------------------------------------------------------
 void ofApp::keyReleased(int key){
+    switch(key)
+    {
+        case OF_KEY_LEFT:
+            bLeftKeyPressed = false;
+        break;
 
+        case OF_KEY_RIGHT:
+            bRightKeyPressed = false;
+        break;
+    }
 }
 
 //--------------------------------------------------------------

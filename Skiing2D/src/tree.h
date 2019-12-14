@@ -8,6 +8,7 @@ class tree
 
         ofVec2f position;
         ofColor *treeColor = NULL;
+        int crashIndex = 0;
 
     public:
         tree() {};
@@ -18,7 +19,9 @@ class tree
         };
         void setPosition(float x, float y);
         void draw();
-        void calc();
+        void calc(float);
         float getY() { return position.y; };
 
+        ofRectangle damageRect;
+        void setCrashIndex(int nCrashIndex) { crashIndex = nCrashIndex; };
 };

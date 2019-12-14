@@ -2,6 +2,7 @@
 
 #include <list>
 #include "tree.h"
+#include "skiier.h"
 
 #define TREECOUNT 100
 
@@ -11,9 +12,9 @@ class slope
 {
     private:
         list<tree> *trees;
-
+        skiier* ski;
     public:
-        slope() { trees = new list<tree>(); };
+        slope(skiier *ski);
         ~slope() { 
             if(trees!=NULL)
                 delete trees;

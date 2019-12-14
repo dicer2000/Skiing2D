@@ -9,6 +9,8 @@ class ofApp : public ofBaseApp{
 	private:
 	    skiier* player1;
 		slope* slope1;
+		bool bLeftKeyPressed = false;
+		bool bRightKeyPressed = false;
 	public:
 		~ofApp();
 		void setup();

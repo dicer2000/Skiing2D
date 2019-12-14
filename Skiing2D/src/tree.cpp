@@ -2,7 +2,6 @@
 
 tree::tree(ofColor* treeColor)
 {
-
     this->treeColor = treeColor;
 }
 
@@ -13,20 +12,37 @@ void tree::draw()
         ofTranslate(this->position);
 
         // Set the tree color
-        ofSetColor(ofColor::darkGreen);
-        ofDrawRectangle(200, 30, 35, 60);
+        // If it has been crashed into, turn red for a second
+        if(crashIndex > 0)
+        {
+            crashIndex--;
+            ofSetColor(ofColor::darkRed);
+        }
+        else
+            ofSetColor(ofColor::darkGreen);
+
+        ofDrawTriangle(0,-100,-25,60,25,60);
+//        ofDrawRectangle(200, 30, 35, 60);
+
+        ofSetColor(ofColor::yellow);
+        ofDrawCircle(0,0,2);
 
     ofPopMatrix();
 
+//    ofSetColor(ofColor::greenYellow);
+//    ofDrawRectangle(this->damageRect);
 
 }
 
-void tree::calc()
+void tree::calc(float yVel)
 {
-    ofVec2f p(0, 3);
+    // Make a new vector using the speed of the skiier * -1
+    // This moves the trees in the opposite direction of him
+    ofVec2f p(0, yVel);
     position -= p;
 
-
+    // Setup the damage box
+    this->damageRect.set(position.x-20, position.y, 40, 60);
 }
 
 void tree::setPosition(float x, float y)

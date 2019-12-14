@@ -11,7 +11,8 @@ class skiier
         ofVec2f velocity;
         ofVec2f acceleration;
         ofColor *bibColor = NULL;
-        int angle;
+        float angle = 90.0;
+        bool bSkiierGoing = true;
 
     public:
 
@@ -23,7 +24,10 @@ class skiier
                 delete bibColor;
         };
         void draw();
-        void calc();
+        void calc(bool bSkiLeft, bool bSkiRight);
+        float getYVelocity() { return velocity.y; };
+        bool getSkiierGoing() { return bSkiierGoing; };
+        void setSkiierGoing(bool skiierGoing) { bSkiierGoing = skiierGoing; };
 
-
+        ofRectangle damageRect;
 };
