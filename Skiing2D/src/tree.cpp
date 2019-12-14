@@ -24,8 +24,8 @@ void tree::draw()
         ofDrawTriangle(0,-100,-25,60,25,60);
 //        ofDrawRectangle(200, 30, 35, 60);
 
-        ofSetColor(ofColor::yellow);
-        ofDrawCircle(0,0,2);
+//        ofSetColor(ofColor::yellow);
+//        ofDrawCircle(0,0,2);
 
     ofPopMatrix();
 
@@ -36,7 +36,7 @@ void tree::draw()
 
 void tree::calc(float yVel)
 {
-    // Make a new vector using the speed of the skiier * -1
+    // Make a new vector using the speed of the skier * -1
     // This moves the trees in the opposite direction of him
     ofVec2f p(0, yVel);
     position -= p;

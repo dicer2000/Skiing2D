@@ -1,5 +1,5 @@
 #include "ofApp.h"
-#include "skiier.h"
+#include "skier.h"
 #include "slope.h"
 
 ofApp::~ofApp()
@@ -20,8 +20,8 @@ void ofApp::setup(){
 	ofSetFrameRate(60); // if vertical sync is off, we can go a bit fast... this caps the framerate at 60fps.
 
 
-    // Create my skiier
-    this->player1 = new skiier(new ofColor(222,40,222));
+    // Create my skier
+    this->player1 = new skier(new ofColor(222,40,222));
 
     // Create a tree
     this->slope1 = new slope(this->player1);

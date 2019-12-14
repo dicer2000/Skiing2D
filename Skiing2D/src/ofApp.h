@@ -1,13 +1,13 @@
 #pragma once
 
 #include "ofMain.h"
-#include "skiier.h"
+#include "skier.h"
 #include "slope.h"
 
 
 class ofApp : public ofBaseApp{
 	private:
-	    skiier* player1;
+	    skier* player1;
 		slope* slope1;
 		bool bLeftKeyPressed = false;
 		bool bRightKeyPressed = false;

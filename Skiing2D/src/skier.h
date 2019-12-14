@@ -2,7 +2,7 @@
 
 #include "ofMain.h"
 
-class skiier
+class skier
 {
     private:
 
@@ -17,9 +17,9 @@ class skiier
     public:
 
 
-        skiier() {};
-        skiier(ofColor*);
-        ~skiier() { 
+        skier() {};
+        skier(ofColor*);
+        ~skier() { 
             if(bibColor!=NULL)
                 delete bibColor;
         };

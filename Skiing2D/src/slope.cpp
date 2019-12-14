@@ -1,13 +1,13 @@
 #include "slope.h"
-#include "skiier.h"
+#include "skier.h"
 #include <list>
 #include <iostream>
 
-slope::slope(skiier* ski)
+slope::slope(skier* ski)
 {
     // Make the tree object
     trees = new list<tree>();
-    // set reference to original skiier
+    // set reference to original skier
     this->ski = ski; 
 }
 
@@ -49,7 +49,7 @@ void slope::calc()
         manageTrees();
 
     // Calculate tree's next position.  Since we will be moving trees
-    // and not the skiier, send in the skiier velocity (*-1)
+    // and not the skier, send in the skier velocity (*-1)
     float yVel = ski->getYVelocity();
 
     if(trees != NULL && trees->size() > 0)

@@ -1,9 +1,9 @@
-#include "skiier.h"
+#include "skier.h"
 #include <iostream>
 
 using namespace std;
 
-skiier::skiier(ofColor* bibColor)
+skier::skier(ofColor* bibColor)
 {
 //        glm::vec2 vPos(0, distance * -1);
         this->position.x = ofGetWindowWidth()/2.0;
@@ -13,7 +13,7 @@ skiier::skiier(ofColor* bibColor)
 }
 
 
-void skiier::draw()
+void skier::draw()
 {
     // Draw the planet
     ofPushMatrix();
@@ -42,8 +42,8 @@ void skiier::draw()
         ofDrawEllipse(8, -5, 12, 13);
 
         // Show center point
-        ofSetColor(ofColor::black);
-        ofDrawCircle(8.0, 25.0, 0, 4.0);
+//        ofSetColor(ofColor::black);
+//        ofDrawCircle(8.0, 25.0, 0, 4.0);
 
     ofPopMatrix();
 
@@ -52,7 +52,7 @@ void skiier::draw()
 
 }
 
-void skiier::calc(bool bSkiLeft, bool bSkiRight)
+void skier::calc(bool bSkiLeft, bool bSkiRight)
 {
     // Convert left or right movements to x/y coord
     if(bSkiLeft)
